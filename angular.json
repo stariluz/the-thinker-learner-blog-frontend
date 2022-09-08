@@ -21,9 +21,9 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              ".src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js"
+              "src/assets/bootstrap-5.2.1/css/bootstrap.min.css"
             ],
-            "scripts": ["src/assets/bootstrap-5.2.1/css/bootstrap.min.css"]
+            "scripts": ["src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {
