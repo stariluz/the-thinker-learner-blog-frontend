@@ -1,3 +1,8 @@
 p {
   font-family: Lato;
 }
+
+* {
+  --color-bg-1: #0a1930;
+  --color-bg-2: #0d2242;
+}

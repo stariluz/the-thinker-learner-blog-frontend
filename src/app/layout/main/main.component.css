@@ -1,0 +1,10 @@
+.main-component {
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-bg-1);
+}
+
+.container-bg-2 {
+  background-color: var(--color-bg-2);
+  width: 100%;
+}
