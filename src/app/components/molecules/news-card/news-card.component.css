@@ -1,0 +1,26 @@
+.news-card-container {
+  position: relative;
+  width: fit-content;
+}
+.image-background {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.news-title {
+  /* border: 2px solid #000000; */
+  position: absolute;
+  justify-content: center;
+  bottom: 1rem;
+  right: 1rem;
+  text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+
+  -webkit-text-stroke: 1px black;
+  /* transform: matrix(1, 0.04, -0.03, 1, 0, 0); */
+}
+.shape-bg {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  object-fit: fill;
+}
