@@ -1,8 +1,10 @@
-<div class="row row-cols-2 g-4">
-  <ng-template ngFor let-news [ngForOf]="[1, 2, 3, 4]" let-it="index">
-    <!-- {{ news }} -->
-    <div class="col">
-      <app-news-card routerLink="./index"></app-news-card>
-    </div>
-  </ng-template>
+<div class="container px-4">
+  <div class="row row-cols-2 g-4">
+    <ng-template ngFor let-news [ngForOf]="[1, 2, 3, 4]" let-it="index">
+      <!-- {{ news }} -->
+      <div class="col">
+        <app-news-card [routerLink]="[it]"></app-news-card>
+      </div>
+    </ng-template>
+  </div>
 </div>

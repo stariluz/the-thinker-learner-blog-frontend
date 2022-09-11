@@ -1,9 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;600;700&display=swap');
+
 p {
-  font-family: Lato;
+  font-family: 'Amiko', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  --color-bg-1: #0a1930;
-  --color-bg-2: #0d2242;
-}
