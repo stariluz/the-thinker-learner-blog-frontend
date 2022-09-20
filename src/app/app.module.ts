@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+//FORM MODULES
 import { FormsModule } from '@angular/forms';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { MarkdownModule } from 'ngx-markdown';
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './layout/main/main.component';
@@ -17,7 +22,15 @@ import { NewsCardComponent } from './components/molecules/news-card/news-card.co
 import { ImageInputComponent } from './components/molecules/image-input/image-input.component';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, FormsModule, NgxDropzoneModule],
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    NgxDropzoneModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
+    LMarkdownEditorModule,
+  ],
   declarations: [
     AppComponent,
     MainComponent,
