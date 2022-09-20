@@ -1,0 +1,106 @@
+.news-banner {
+  position: relative;
+  height: 320px;
+  transition: all ease 0.2s;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: -5px -5px 5px -10px rgba(15, 15, 15, 0.4);
+}
+.image-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image-background .banner-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-shadow: inset 0px -3rem 2rem -1rem var(--color-bg-2) !important;
+  background: transparent;
+}
+.image-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.news-title {
+  /* border: 2px solid #000000; */
+  margin: 0;
+  max-width: 50%;
+
+  font-weight: 600;
+  position: absolute;
+  z-index: 100;
+  bottom: 0.2rem;
+  right: 0.3rem;
+}
+.news-title .input-title {
+  border-radius: 8px;
+  width: 100%;
+  text-align: end;
+  overflow: auto;
+  resize: none;
+
+  transform: matrix(1, 0.04, -0.04, 1, 0, 0);
+  transform-origin: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: var(--color-text-1);
+  text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
+    2px 2px 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000, 0 3px 0 #000000,
+    0 -3px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000,
+    -3px 3px 0 #000000, 3px 3px 0 #000000, -4px 0 0 #000000, 4px 0 0 #000000,
+    0 4px 0 #000000, 0 -4px 0 #000000;
+}
+.news-title .input-title::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(255, 255, 255, 0.4);
+  text-shadow: none;
+}
+.news-title .input-title:focus-visible {
+  /* border-bottom: 1px solid var(--color-gray-1); */
+
+  transform: matrix(1, 0.04, -0.04, 1, 0, 0) scale(1.02);
+  box-shadow: inset -1px -1px 0px 0px var(--color-gray-1);
+  outline: none;
+}
+.news-title .shape-bg {
+  position: absolute;
+  bottom: -0.2rem;
+  right: -0.3rem;
+  width: calc(105% + 0.5rem);
+  height: calc(120% + 1rem);
+  object-fit: cover;
+  object-position: 0 0;
+  z-index: -1;
+  overflow: visible;
+}
+.news-content {
+  font-weight: 400;
+  /* line-height: 140%; */
+
+  text-align: justify;
+  letter-spacing: 0.01em;
+}
+
+.image-dropzone {
+  /* margin-left: 1rem; */
+  width: 100%;
+  /* min-width: 200px; */
+  height: 100%;
+  /* background: rgb(198, 198, 198); */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.image-dropzone > * {
+  width: 100%;
+  height: 100%;
+}
+.image-dropzone > app-image-input {
+  position: absolute;
+}
+.image-dropzone ::ng-deep ngx-dropzone {
+  border: 4px dashed #ffffff;
+}
