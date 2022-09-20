@@ -27,7 +27,7 @@
 .news-title {
   /* border: 2px solid #000000; */
   margin: 0;
-  max-width: 50%;
+  width: 40%;
 
   font-weight: 600;
   position: absolute;
@@ -103,4 +103,7 @@
 }
 .image-dropzone ::ng-deep ngx-dropzone {
   border: 4px dashed #ffffff;
+}
+.image-dropzone ::ng-deep ngx-dropzone {
+  font-family: 'Amiko', sans-serif !important;
 }
