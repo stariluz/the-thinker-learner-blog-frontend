@@ -1,10 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, VERSION, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class AppComponent {
-  title = 'test-blog';
+  title = 'The Thinker Learner Blog';
+  name = 'Angular ' + VERSION.major;
 }

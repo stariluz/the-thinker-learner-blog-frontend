@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css2?family=Tourney:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  --color-bg-1: #0a1930;
+  --color-bg-2: #0d2242;
+  --color-gray-1: #d1d1d1;
+  --color-text-1: white;
+}
+
+html {
+  height: fit-content;
+  padding-bottom: 1px;
+  background-color: var(--color-bg-1);
+}
+body {
+  height: fit-content;
+  padding-bottom: 1rem;
+  background: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Tourney', cursive;
+}

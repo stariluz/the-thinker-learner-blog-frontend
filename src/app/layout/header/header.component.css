@@ -1,0 +1,66 @@
+header {
+  display: grid;
+  grid-template-columns: 100px 100px [center-column] 1fr 100px [end-column] 100px;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  margin-bottom: 3.5rem;
+}
+.header-center {
+  grid-column-start: center-column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-left {
+  grid-column-start: end-column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 2px solid white;
+  box-shadow: 0px 0px 5px -2px black;
+  background: white;
+}
+.account-image {
+  height: 100%;
+  width: 100%;
+  transform: scale(1.02);
+  transform-origin: center;
+  object-fit: cover;
+  object-position: center;
+}
+.tools-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5rem;
+}
+.tool-button {
+  position: relative;
+  border: none;
+  outline: none;
+  background: transparent;
+  height: 32px;
+  width: 32px;
+  padding: 0;
+  margin: 0;
+
+  transition: all ease 0.2s;
+}
+.tool-button:hover {
+  transform: scale(1.05);
+  transform-origin: center;
+}
+.tool-image {
+  height: 32px;
+  width: 32px;
+  object-fit: contain;
+}
