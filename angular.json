@@ -18,50 +18,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets",
-              {
-                "glob": "**/*",
-                "input": "node_modules/ace-builds/src-min",
-                "output": "./assets/ace-builds/"
-              }
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "src/assets/bootstrap-5.2.1/css/bootstrap.min.css",
-
-              // Ngx Markdown editor
-              "node_modules/ngx-markdown-editor/assets/highlight.js/agate.min.css",
-
-              // Ngx Markdown
-              "node_modules/prismjs/themes/prism-okaidia.css",
-              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.css",
-              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.css",
-              "node_modules/prismjs/plugins/command-line/prism-command-line.css",
-              "node_modules/katex/dist/katex.min.css"
+              "src/assets/bootstrap-5.2.1/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js",
-
-              // Ngx Markdown editor
-              "node_modules/ngx-markdown-editor/assets/highlight.js/highlight.min.js",
-              "node_modules/ngx-markdown-editor/assets/marked.min.js",
-
-              // Ngx Markdown
-              "node_modules/marked/marked.min.js",
-              "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-csharp.min.js",
-              "node_modules/prismjs/components/prism-css.min.js",
-              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js",
-              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js",
-              "node_modules/prismjs/plugins/command-line/prism-command-line.js",
-              "node_modules/emoji-toolkit/lib/js/joypixels.min.js",
-              "node_modules/katex/dist/katex.min.js",
-              "node_modules/katex/dist/contrib/auto-render.min.js",
-              "node_modules/mermaid/dist/mermaid.min.js",
-              "node_modules/clipboard/dist/clipboard.min.js"
-            ]
+            "scripts": ["src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js"]
           },
           "configurations": {
             "production": {

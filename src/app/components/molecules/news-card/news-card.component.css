@@ -51,7 +51,6 @@
   box-shadow: -1rem -1rem 2rem 1rem var(--color-bg-2) !important;
 }
 .news-title span {
-  text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
