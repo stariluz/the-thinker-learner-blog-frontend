@@ -77,12 +77,31 @@
   z-index: -1;
   overflow: visible;
 }
-.news-content {
+.news-content-input {
+  margin-bottom: 2rem;
+}
+.news-content-preview {
   font-weight: 400;
   /* line-height: 140%; */
 
-  text-align: justify;
+  text-align: left;
   letter-spacing: 0.01em;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--color-bg-1);
+  position: relative;
+}
+.preview-tag{
+  background: rgb(15,50,36);
+  background: linear-gradient(-90deg, rgb(7, 57, 37) 14%, rgba(35,80,82,1) 100%);
+  color: rgb(138, 202, 167);
+  font-size: small;
+  font-weight: 700;
+  position: absolute;
+  top: -12px;
+  right: 0px;
+  border-radius: 16px 16px 0px 16px;
+  padding: 2px 8px;
 }
 
 .image-dropzone {
@@ -109,4 +128,78 @@
 .image-dropzone ::ng-deep ngx-dropzone * {
   font-family: 'Tourney', cursive;
   font-weight: 900;
+}
+
+.buttons-section{
+  margin-top: 2rem;
+  gap: 10px;
+  font-weight: 700;
+}
+.buttons-section button{
+  font-weight: 700;
+  font-size: large;
+  margin: 5px;
+  border-radius: 0px 1rem 0px 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.buttons-section button.cancel{
+  font-weight: 700;
+  font-size: large;
+  margin: 5px;
+  border-radius: 0px 1rem 0px 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* MARKDOWN EDITOR STYLES */
+
+::ng-deep md-editor .md-editor-container .md-layout .tool-bar{
+  background-color: var(--color-bg-1) !important;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+}
+::ng-deep md-editor .md-editor-container .md-layout .tool-bar *{
+  color: white;
+}
+
+::ng-deep md-editor .ace-tm{
+  background: var(--color-bg-4) !important;
+  color: white;
+} 
+::ng-deep md-editor .ace-tm .ace_cursor{
+  color: gray ;
+} 
+::ng-deep md-editor .ace-tm .ace_print-margin{
+  display: none;
+} 
+::ng-deep md-editor .preview-panel{
+  background: var(--color-bg-2) !important;
+  color: white;
+} 
+::ng-deep md-editor .ace_gutter{
+  background: var(--color-bg-3) !important;
+} 
+::ng-deep md-editor .ace_gutter-cell {
+  padding: 0px 5px;
+  color: gray;
+}
+::ng-deep md-editor .ace-tm .ace_marker-layer .ace_active-line {
+  background-color: var(--color-bg-3);
+}
+::ng-deep md-editor .ace-tm .ace_gutter-active-line {
+  background-color: unset;
+  background: rgb(5,44,77);
+  background: linear-gradient(90deg, rgba(5,44,77,1) 98%, rgba(81,84,84,1) 100%);
+  border-radius: 5px 0px 0px 5px;
+}
+::ng-deep md-editor .md-footer {
+  background-color: var(--color-bg-1) !important;
+  border-radius: 0px 0px 10px 10px;
+  padding: 2px 10px;
+}
+::ng-deep md-editor .md-editor-container .md-layout .md-footer .length-view{
+  padding: 0px!important;
+}
+::ng-deep md-editor .md-editor-container .md-layout .tool-bar .btn-group:nth-last-child(2){
+  display: none;
 }

@@ -25,14 +25,6 @@
         src="/assets/icons/shape-1.svg"
         alt="Title background"
       />
-      <!-- <span> This is an example title </span> -->
-      <!-- <input
-        class="input-title"
-        type="text"
-        value="I'm a ver very long title cause I need to fill all the allowed space of
-      my parent container and I will no be all rendered"
-        placeholder="title"
-      /> -->
       <textarea
         class="input-title"
         name=""
@@ -45,8 +37,26 @@
     </h2>
   </div>
 
-  <div class="news-content container">
-    <markdown ngPreserveWhitespaces [data]="newsContent"> </markdown>
-    <!-- <simplemde [(ngModel)]="newsContent"></simplemde> -->
+  <div class="news-content-input">
+    <md-editor
+      name="Content"
+      [mode]="'editor'"
+      [options]="mdEditorOptions"
+      [(ngModel)]="newsContent"
+      maxlength="500"
+    ></md-editor>
+  </div>
+
+  <div class="container">
+    <div class="news-content-preview">
+      <div class="preview-tag">Preview</div>
+      <markdown ngPreserv  eWhitespaces [data]="newsContent"> </markdown>
+    </div>
+  </div>
+  <div class="buttons-section">
+    <hr>
+    <button class="cancel btn btn-danger float-left">Cancel</button>
+    <button class="confirm btn btn-success float-end">Save and publish</button>
+    <button class="draft btn btn-primary float-end">Save as a draft</button>
   </div>
 </div>
