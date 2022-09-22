@@ -8,6 +8,9 @@
   --color-gray-1: #d1d1d1;
   --color-text-1: white;
 }
+p {
+  font-family: 'Amiko', sans-serif;
+}
 
 html {
   height: fit-content;
@@ -21,10 +24,16 @@ body {
 }
 
 h1,
+h1 *,
 h2,
+h2 *,
 h3,
+h3 *,
 h4,
+h4 *,
 h5,
-h6 {
+h5 *,
+h6,
+h6 * {
   font-family: 'Tourney', cursive;
 }

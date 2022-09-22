@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 import { FormsModule } from '@angular/forms';
 import { NgxDropzoneModule } from 'ngx-dropzone';
+import { MarkdownModule } from 'ngx-markdown';
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './layout/main/main.component';
@@ -21,7 +25,9 @@ import { ImageInputComponent } from './components/molecules/image-input/image-in
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgxDropzoneModule
+    NgxDropzoneModule,
+    MarkdownModule.forRoot({}),
+    LMarkdownEditorModule,
   ],
   declarations: [
     AppComponent,
