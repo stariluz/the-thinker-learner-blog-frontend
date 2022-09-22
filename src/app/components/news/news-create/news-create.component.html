@@ -37,14 +37,26 @@
     </h2>
   </div>
 
-  <div class="news-content container">
-    <!-- <markdown ngPreserv  eWhitespaces [data]="newsContent"> </markdown> -->
+  <div class="news-content-input">
     <md-editor
       name="Content"
       [mode]="'editor'"
+      [options]="mdEditorOptions"
       [(ngModel)]="newsContent"
       maxlength="500"
-    >
-</md-editor>
+    ></md-editor>
+  </div>
+
+  <div class="container">
+    <div class="news-content-preview">
+      <div class="preview-tag">Preview</div>
+      <markdown ngPreserv  eWhitespaces [data]="newsContent"> </markdown>
+    </div>
+  </div>
+  <div class="buttons-section">
+    <hr>
+    <button class="cancel btn btn-danger float-left">Cancel</button>
+    <button class="confirm btn btn-success float-end">Save and publish</button>
+    <button class="draft btn btn-primary float-end">Save as a draft</button>
   </div>
 </div>
