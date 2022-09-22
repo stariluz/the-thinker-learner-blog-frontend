@@ -21,9 +21,29 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.css",
-              "src/assets/bootstrap-5.2.1/css/bootstrap.min.css"
+              "src/assets/bootstrap-5.2.1/css/bootstrap.min.css",
+              "src/styles.less"
             ],
-            "scripts": ["src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js"]
+            "scripts": [
+              "src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js",
+              "node_modules/marked/marked.min.js",
+              // Ngx Markdown
+              "node_modules/marked/marked.min.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-csharp.min.js",
+              "node_modules/prismjs/components/prism-css.min.js",
+              "node_modules/prismjs/plugins/line-numbers/prism-line-numbers.js",
+              "node_modules/prismjs/plugins/line-highlight/prism-line-highlight.js",
+              "node_modules/prismjs/plugins/command-line/prism-command-line.js",
+              "node_modules/emoji-toolkit/lib/js/joypixels.min.js",
+              "node_modules/katex/dist/katex.min.js",
+              "node_modules/katex/dist/contrib/auto-render.min.js",
+              "node_modules/mermaid/dist/mermaid.min.js",
+              "node_modules/clipboard/dist/clipboard.min.js",
+
+              //Ngx Simplemd
+              "node_modules/simplemde-antd/dist/simplemde.min.js"
+            ]
           },
           "configurations": {
             "production": {
