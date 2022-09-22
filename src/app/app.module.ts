@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-// import { NgxDropzoneModule } from 'ngx-dropzone';
+import { NgxDropzoneModule } from 'ngx-dropzone';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './layout/main/main.component';
@@ -21,7 +21,7 @@ import { ImageInputComponent } from './components/molecules/image-input/image-in
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    // NgxDropzoneModule
+    NgxDropzoneModule
   ],
   declarations: [
     AppComponent,
