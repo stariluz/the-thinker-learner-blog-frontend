@@ -6,6 +6,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgxDropzoneModule } from 'ngx-dropzone';
 import { MarkdownModule } from 'ngx-markdown';
+import { LMarkdownEditorModule } from 'ngx-markdown-editor';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './layout/main/main.component';
@@ -26,6 +27,7 @@ import { ImageInputComponent } from './components/molecules/image-input/image-in
     FormsModule,
     NgxDropzoneModule,
     MarkdownModule.forRoot({}),
+    LMarkdownEditorModule,
   ],
   declarations: [
     AppComponent,

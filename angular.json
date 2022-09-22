@@ -18,15 +18,27 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+
+              {
+                "glob": "**/*",
+                "input": "node_modules/ace-builds/src-min",
+                "output": "./assets/ace-builds/"
+              }
+            ],
             "styles": [
               "src/styles.css",
               "src/assets/bootstrap-5.2.1/css/bootstrap.min.css",
-              "src/styles.less"
+
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/ngx-markdown-editor/assets/highlight.js/agate.min.css"
             ],
             "scripts": [
               "src/assets/bootstrap-5.2.1/js/bootstrap.bundle.min.js",
-              "node_modules/marked/marked.min.js",
+
               // Ngx Markdown
               "node_modules/marked/marked.min.js",
               "node_modules/prismjs/prism.js",
@@ -41,8 +53,9 @@
               "node_modules/mermaid/dist/mermaid.min.js",
               "node_modules/clipboard/dist/clipboard.min.js",
 
-              //Ngx Simplemd
-              "node_modules/simplemde-antd/dist/simplemde.min.js"
+              //Ngx Markdown editor
+              "node_modules/ngx-markdown-editor/assets/highlight.js/highlight.min.js",
+              "node_modules/ngx-markdown-editor/assets/marked.min.js"
             ]
           },
           "configurations": {
