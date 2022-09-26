@@ -19,6 +19,7 @@ import { ImageContainerComponent } from './components/atoms/image-container/imag
 
 import { NewsCardComponent } from './components/molecules/news-card/news-card.component';
 import { ImageInputComponent } from './components/molecules/image-input/image-input.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   imports: [
@@ -28,6 +29,8 @@ import { ImageInputComponent } from './components/molecules/image-input/image-in
     NgxDropzoneModule,
     MarkdownModule.forRoot({}),
     LMarkdownEditorModule,
+    GraphQLModule,
+    HttpClientModule,
   ],
   declarations: [
     AppComponent,

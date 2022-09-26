@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Apollo, gql } from 'apollo-angular';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor() {}
+  users: any[]=[];
+  loading = true;
+  error: any;
 
-  ngOnInit() {}
+  constructor(private apollo: Apollo) {}
+
+  ngOnInit() {
+    this.apollo.watchQuery({
+      query: gql`
+        {
+          users{
+            id
+          }
+        }
+      `,
+    }).valueChanges.subscribe((result: any) => {
+      this.users = result?.data?.users;
+      this.loading = result.loading;
+      this.error = result.error;
+    });
+  }
 }
