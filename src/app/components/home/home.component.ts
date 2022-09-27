@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     this.apollo.watchQuery({
       query: gql`
         {
-          users{
+          getAllNews{
             id
           }
         }
