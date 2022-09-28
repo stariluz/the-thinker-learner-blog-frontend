@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "deploy": "ng deploy --base-href=https://adrigondo.github.io/TheThinkerLearner-Blog-Frontend/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
