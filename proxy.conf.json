@@ -1,0 +1,8 @@
+{
+    "/api:dev/":{
+        "target": "https://the-thinker-learner-backend1.herokuapp.com/",
+        "secure": true,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

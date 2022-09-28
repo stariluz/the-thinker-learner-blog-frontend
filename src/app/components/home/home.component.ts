@@ -7,7 +7,7 @@ import { Apollo, gql } from 'apollo-angular';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  users: any[]=[];
+  newsList: any[]=[];
   loading = true;
   error: any;
 
@@ -17,13 +17,19 @@ export class HomeComponent implements OnInit {
     this.apollo.watchQuery({
       query: gql`
         {
-          users{
+          getAllNews{
             id
+            title
+            content
+            picture
+            createdAt
+            updatedAt
           }
         }
       `,
     }).valueChanges.subscribe((result: any) => {
-      this.users = result?.data?.users;
+      this.newsList = result?.data?.getAllNews;
+      console.log(this.newsList)
       this.loading = result.loading;
       this.error = result.error;
     });
