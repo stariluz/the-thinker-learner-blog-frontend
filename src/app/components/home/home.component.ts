@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
             id
             title
             picture
+            createdAt
           }
         }
       `,
