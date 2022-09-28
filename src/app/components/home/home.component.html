@@ -1,14 +1,13 @@
 <div class="container px-4">
   <div class="row row-cols-2 g-4">
-    <div class="col">
-      <ng-template ngFor let-user [ngForOf]="users" let-it="index">
-        {{it}} - {{user.id}}
+    <!-- <div class="col">
+      <ng-template ngFor let-oneNews [ngForOf]="news" let-it="index">
+        {{it}} - {{oneNews.id}} - {{oneNews.title}}
       </ng-template>
-    </div>
-    <ng-template ngFor let-news [ngForOf]="[1, 2, 3, 4]" let-it="index">
-      <!-- {{ news }} -->
+    </div> -->
+    <ng-template ngFor let-news [ngForOf]="newsList" let-it="index">
       <div class="col">
-        <app-news-card [routerLink]="[it]"></app-news-card>
+        <app-news-card [routerLink]="[it]" [newsObject]="news"></app-news-card>
       </div>
     </ng-template>
   </div>

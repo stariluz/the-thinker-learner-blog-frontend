@@ -32,12 +32,14 @@
         rows="2"
         maxlength="80"
         placeholder="News title"
-        [(ngModel)]="newsTitle"
+        [(ngModel)]="newsObject.title"
       ></textarea>
     </h2>
   </div>
 
   <div class="news-content-input">
+    <input type="url" class="form-control" placeholder="URL image" [(ngModel)]="newsObject.picture">
+
     <md-editor
       name="Content"
       [mode]="'editor'"
@@ -50,13 +52,13 @@
   <div class="container">
     <div class="news-content-preview">
       <div class="preview-tag">Preview</div>
-      <markdown ngPreserv  eWhitespaces [data]="newsContent"> </markdown>
+      <markdown ngPreserv  eWhitespaces [data]="newsObject.content"> </markdown>
     </div>
   </div>
   <div class="buttons-section">
     <hr>
     <button class="cancel btn btn-danger float-left">Cancel</button>
-    <button class="confirm btn btn-success float-end">Save and publish</button>
+    <button class="confirm btn btn-success float-end" (click)="createNews()">Save and publish</button>
     <button class="draft btn btn-primary float-end">Save as a draft</button>
   </div>
 </div>
