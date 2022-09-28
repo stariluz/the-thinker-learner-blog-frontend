@@ -42,23 +42,35 @@ This is the content for your news, the downside preview is like the real view wh
     content: this.newsContent,
     picture: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
   };
+  newsToCreate:CreateNewsInput={
+    title:"Titulo por default xDDXDXD",
+    content: this.newsContent,
+    picture: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+  };
   result:any;
 
   ngOnInit() {}
+
   public createNews(){
+    console.log("NEWS TO CREATE: ", this.newsToCreate)
+    const CREATE_NEWS=gql`
+    mutation CREATE_NEWS($news:CreateNewsInput!){
+      createNews(input:$news){
+        id
+        title
+        content
+        picture
+      }
+    }`;
     this.apollo.mutate({
-      mutation: gql`mutation($news: CreateNewsInput!){
-        createNews(input: $news){
-          id
-          title
-          content
-          picture
-        }
-      }`,
-      variables: {news: this.newsObject as CreateNewsInput}
+      mutation: CREATE_NEWS,
+      variables: {
+        news: this.newsToCreate
+      }
     }).subscribe(result => {
-      this.result=result.data
-      this.newsObject = result?.data as NewsType;
+      console.log(result)
+      /* this.result=result.data
+      this.newsObject = result?.data as NewsType; */
       this.router.navigate(["/.."]);
       /* if(!result.errors){
       } */
