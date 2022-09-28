@@ -1,6 +1,6 @@
 header {
-  display: grid;
-  grid-template-columns: 100px 100px [center-column] 1fr 100px [end-column] 100px;
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 1rem;
   margin-bottom: 3.5rem;
@@ -16,6 +16,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.header-logo {
+  cursor: pointer;
 }
 .account {
   display: flex;
@@ -63,4 +66,13 @@ header {
   height: 32px;
   width: 32px;
   object-fit: contain;
+}
+@media (min-width: 992px) {
+  header {
+    display: grid;
+    grid-template-columns: 200px [center-column] 1fr [end-column] 200px;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+    margin-bottom: 3.5rem;
+  }
 }

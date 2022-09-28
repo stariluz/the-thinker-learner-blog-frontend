@@ -1,3 +1,7 @@
+.news-container{
+  padding: 1rem 6rem;
+  padding-bottom: 5rem;
+}
 .news-banner {
   position: relative;
   height: 320px;

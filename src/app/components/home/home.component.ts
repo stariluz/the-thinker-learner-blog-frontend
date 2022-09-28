@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
+import { NewsType } from 'src/app/types/news.type';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,7 @@ import { Apollo, gql } from 'apollo-angular';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  newsList: any[]=[];
+  newsList: NewsType[]=[];
   loading = true;
   error: any;
 
@@ -20,10 +21,7 @@ export class HomeComponent implements OnInit {
           getAllNews{
             id
             title
-            content
             picture
-            createdAt
-            updatedAt
           }
         }
       `,

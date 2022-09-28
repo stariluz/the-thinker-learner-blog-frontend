@@ -7,7 +7,7 @@
     </div> -->
     <ng-template ngFor let-news [ngForOf]="newsList" let-it="index">
       <div class="col">
-        <app-news-card [routerLink]="[it]" [newsObject]="news"></app-news-card>
+        <app-news-card [routerLink]="[news.id]" [newsObject]="news"></app-news-card>
       </div>
     </ng-template>
   </div>
