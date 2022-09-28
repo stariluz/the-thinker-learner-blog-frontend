@@ -7,7 +7,7 @@ const uriLocal = 'http://localhost:3000/graphql'; // Local run enviroment
 var uri = 'https://the-thinker-learner-backend1.herokuapp.com/graphql/'; // Deployed server
 export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
   return {
-    link: httpLink.create({uri: uriLocal}),
+    link: httpLink.create({uri: uri}),
     cache: new InMemoryCache(),
   };
 }
