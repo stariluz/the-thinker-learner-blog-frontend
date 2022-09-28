@@ -1,11 +1,25 @@
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding-top: 1rem;
   margin-bottom: 3.5rem;
+  position: relative;
+}
+.presentation{
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  font-size: small!important;
+  background-color: #ffe666;
+  color: var(--color-bg-1);
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 2px 6px;
+  text-align: end;
 }
 .header-center {
+  /* margin-top: 1rem; */
   grid-column-start: center-column;
   display: flex;
   justify-content: center;
@@ -19,6 +33,7 @@ header {
 }
 .header-logo {
   cursor: pointer;
+  max-width: 100%;
 }
 .account {
   display: flex;
@@ -68,11 +83,14 @@ header {
   object-fit: contain;
 }
 @media (min-width: 992px) {
-  header {
+  /* header {
     display: grid;
     grid-template-columns: 200px [center-column] 1fr [end-column] 200px;
     flex-wrap: wrap;
     padding-top: 1rem;
     margin-bottom: 3.5rem;
+  } */
+  .presentation{
+    right: 30%;
   }
 }
