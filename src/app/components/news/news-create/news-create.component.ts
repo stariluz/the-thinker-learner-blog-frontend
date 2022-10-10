@@ -40,7 +40,8 @@ This is the content for your news, the downside preview is like the real view wh
     id: "",
     title:"Titulo por default xDDXDXD",
     content: this.newsContent,
-    picture: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    picture: "https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    createdAt: new Date(),
   };
   newsToCreate:CreateNewsInput={
     title:"Titulo por default xDDXDXD",
@@ -69,11 +70,7 @@ This is the content for your news, the downside preview is like the real view wh
       }
     }).subscribe(result => {
       console.log(result)
-      /* this.result=result.data
-      this.newsObject = result?.data as NewsType; */
       this.router.navigate(["/.."]);
-      /* if(!result.errors){
-      } */
     })
   }
   public updateNews(){

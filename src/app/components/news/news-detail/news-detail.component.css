@@ -1,6 +1,22 @@
+.date{
+  /* font-size: 12px; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0;
+  top: 0;
+  text-align: end;
+  background-color: #2e5691;
+  padding: 2px 5px;
+  border-radius: 0px 0px 0px 10px;
+}
+.date .badge{
+  /* color: black; */
+}
 .news-container{
   padding: 1rem 1rem;
   padding-bottom: 5rem;
+  position: relative;
 }
 .news-banner {
   position: relative;

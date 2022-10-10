@@ -3,4 +3,5 @@ export type NewsType = {
   title: string;
   content: string;
   picture: string;
+  createdAt: Date;
 }

@@ -1,6 +1,11 @@
 <ng-template [ngIf]="this.newsObject">
   <div class="news-container container">
     <div class="news-banner mb-4">
+      <div class="date">
+        <div class="badge">
+          {{ newsObject.createdAt | date:'h:mm a - dd/MM/YYYY' }}
+        </div>
+      </div>
       <div class="image-background">
         <div class="banner-shadow"></div>
         <img
