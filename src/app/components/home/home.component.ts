@@ -8,29 +8,42 @@ import { NewsType } from 'src/app/types/news.type';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  newsList: NewsType[]=[];
+  newsList: Array<NewsType> = [];
   loading = true;
   error: any;
 
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
-    this.apollo.watchQuery({
-      query: gql`
-        {
-          getAllNews{
-            id
-            title
-            picture
-            createdAt
+    this.apollo
+      .watchQuery({
+        query: gql`
+          {
+            getAllNews {
+              id
+              title
+              picture
+              createdAt
+            }
           }
-        }
-      `,
-    }).valueChanges.subscribe((result: any) => {
-      this.newsList = result?.data?.getAllNews;
-      console.log(this.newsList)
-      this.loading = result.loading;
-      this.error = result.error;
-    });
+        `,
+      })
+      .valueChanges.subscribe((result: any) => {
+        console.log(result);
+        let sortedList = [...result?.data?.getAllNews];
+        console.log(sortedList);
+        this.newsList=sortedList.sort((a: NewsType, b: NewsType) => {
+          if (a.createdAt < b.createdAt) {
+            return 1;
+          } else if (a.createdAt > b.createdAt) {
+            return -1;
+          }else{
+            return 0;
+          }
+        });
+        console.log('HOLAAAA', this.newsList);
+        this.loading = result.loading;
+        this.error = result.error;
+      });
   }
 }

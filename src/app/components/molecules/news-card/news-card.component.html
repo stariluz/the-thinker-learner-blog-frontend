@@ -1,4 +1,9 @@
 <div class="news-card-container">
+  <div class="date">
+    <div class="badge">
+      {{ newsObject.createdAt | date:'h:mm a - dd/MM/YYYY' }}
+    </div>
+  </div>
   <div class="image-background">
     <div class="card-shadow"></div>
     <img

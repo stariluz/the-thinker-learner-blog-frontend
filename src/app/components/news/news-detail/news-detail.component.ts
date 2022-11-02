@@ -36,7 +36,7 @@ export class NewsDetailComponent implements OnInit {
           }
         }
       `
-      console.log(GET_NEWS);
+      // console.log(GET_NEWS);
       this.apollo.watchQuery({
         query: GET_NEWS,
         variables: {

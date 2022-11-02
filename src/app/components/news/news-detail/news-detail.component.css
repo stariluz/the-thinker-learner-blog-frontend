@@ -1,6 +1,12 @@
+.news-container{
+  padding: 1rem 1rem;
+  padding-bottom: 5rem;
+  position: relative;
+}
 .date{
   /* font-size: 12px; */
   position: absolute;
+  z-index: 2;
   display: flex;
   align-items: center;
   right: 0;
@@ -13,14 +19,13 @@
 .date .badge{
   /* color: black; */
 }
-.news-container{
-  padding: 1rem 1rem;
-  padding-bottom: 5rem;
-  position: relative;
-}
 .news-banner {
+  display: flex;
+  flex-direction: column;
+
   position: relative;
   height: 450px;
+  width: 100%;
   transition: all ease 0.2s;
   border-radius: 1rem;
   overflow: hidden;
@@ -45,24 +50,18 @@
   object-position: center;
 }
 .news-title {
-  /* border: 2px solid #000000; */
+  position: relative;
+  max-width: 100%;
+  
   margin: 0;
-  max-width: 50%;
-
-  font-weight: 600;
-  position: absolute;
   z-index: 1;
-  justify-content: center;
-  bottom: 1rem;
-  right: 1.5rem;
+  font-weight: 600;
   color: var(--color-text-1);
-  text-shadow:
-  /* Outline 1 */ -2px -2px 0 #000000, 2px -2px 0 #000000,
+  text-shadow: -2px -2px 0 #000000, 2px -2px 0 #000000,
     -2px 2px 0 #000000, 2px 2px 0 #000000, -3px 0 0 #000000, 3px 0 0 #000000,
     0 3px 0 #000000, 0 -3px 0 #000000, -3px -3px 0 #000000, 3px -3px 0 #000000,
     -3px 3px 0 #000000, 3px 3px 0 #000000, -4px 0 0 #000000, 4px 0 0 #000000,
-    0 4px 0 #000000, 0 -4px 0 #000000; /* Terminate with a semi-colon */
-  /* box-shadow: -1rem -1rem 2rem 1rem var(--color-bg-2) !important; */
+    0 4px 0 #000000, 0 -4px 0 #000000;
 }
 .news-title span {
   overflow: hidden;
@@ -101,12 +100,26 @@
 }
 @media (min-width: 776px) {
   .news-container{
-    padding: 1rem 4rem;
+    padding: 1rem 3rem;
   }
 }
 @media (min-width: 992px) {
+  .news-banner {
+    display: inherit;
+    flex-direction: inherit;
+    margin-bottom: 2rem;
+  }
   .news-container{
-    padding: 1rem 6rem;
-    padding-bottom: 5rem;
+    padding: 1rem 5rem;
+    padding-bottom: 4rem;
+  }
+  /*  */
+  .news-title {
+    position: absolute;
+    max-width: 60%;
+    bottom: 1rem;
+    right: 1.5rem;
+    justify-content: center;
+    font-size: 1.8rem;
   }
 }
